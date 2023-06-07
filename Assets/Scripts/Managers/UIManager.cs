@@ -47,7 +47,7 @@ public class UIManager
     /// <param name="uiName">ui名</param>
     /// <param name="callback">开启后回调</param>
     /// <returns>ui路径</returns>
-    public string Open(string uiName, System.Action callback = null)
+    public string Open(string uiName,params object[] param)
     {
         if (mUIDic.ContainsKey(uiName))
         {
@@ -71,12 +71,9 @@ public class UIManager
         uiBase.Init();
         sortByLayer(uiBase);
         go.transform.SetParent(mUIRoot);
-        if(callback != null)
-        {
-            callback();
-        }
         mUIDic.Add(uiName, go.GetComponent<UIBase>());
         Debug.Log(string.Format("UI open success,ui name is {0}", uiName));
+        uiBase.OnOpen(param);
         return PATH + uiName;
     }
     /// <summary>

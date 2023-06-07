@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class MessageManger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static MessageManger instance;
+    void Awake()
     {
-        
+        if (instance == null) instance = this;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void MessagePut(string msg)
+    {
+        UIManager.instance.Open("MessageUI", msg);
     }
 }

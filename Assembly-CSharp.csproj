@@ -57,8 +57,14 @@
     <Compile Include="Assets\Scripts\Managers\MessageManger.cs" />
     <Compile Include="Assets\Scripts\Managers\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Tools\BackBtn.cs" />
+    <Compile Include="Assets\Scripts\Tools\ClickListener.cs" />
     <Compile Include="Assets\Scripts\Tools\DontDestory.cs" />
+    <Compile Include="Assets\Scripts\Tools\Timer.cs" />
     <Compile Include="Assets\Scripts\Tools\UIBase.cs" />
+    <Compile Include="Assets\Scripts\UI\MessageUI.cs" />
+    <Compile Include="Assets\Scripts\UI\SetUI.cs" />
+    <Compile Include="Assets\Scripts\UI\StartUI.cs" />
     <Compile Include="Assets\Scripts\UI\TestUI.cs" />
   </ItemGroup>
   <ItemGroup>
